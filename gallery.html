@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <title>Drichest Engineering Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            position: relative;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-title {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            font-size: 16px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Pop-up Modal */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+
+        .popup-content {
+            background: #fff;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: #003366;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-content h2 {
+            margin-bottom: 15px;
+        }
+
+        .popup-content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .popup a.close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Project Gallery</h1>
+
+    <div class="gallery">
+        <!-- Image 1 -->
+        <a href="#popup1">
+            <div class="image-container">
+                <div class="image-title">High-Rise
+                    Construction</div>
+                <img src="Global best Award.jpeg"
+                    alt="High-Rise Construction" />
+            </div>
+        </a>
+
+        <!-- Image 2 -->
+        <a href="#popup2">
+            <div class="image-container">
+                <div class="image-title">Bridge
+                    Framework</div>
+                <img src="Bridge structural framework.jpg"
+                    alt="Bridge Framework" />
+            </div>
+        </a>
+
+        <!-- Image 3 -->
+        <a href="#popup3">
+            <div class="image-container">
+                <div class="image-title">
+                    Electrical Systems</div>
+                <img src="Electrical Engineering.jpeg"
+                    alt="Electrical Systems" />
+            </div>
+        </a>
+
+        <!-- Image 4 -->
+        <a href="#popup4">
+            <div class="image-container">
+                <div class="image-title">HVAC
+                    Installation</div>
+                <img src="ductwork.webp"
+                    alt="HVAC Installation" />
+            </div>
+        </a>
+
+        <!-- Image 5 -->
+        <a href="#popup5">
+            <div class="image-container">
+                <div class="image-title">Highway
+                    Development</div>
+                <img src="Road and highway development.avif"
+                    alt="Highway Development" />
+            </div>
+        </a>
+
+        <!-- Image 6 -->
+        <a href="#popup6">
+            <div class="image-container">
+                <div class="image-title">Drainage
+                    Infrastructure</div>
+                <img src="Drainage infrastructure.jpg"
+                    alt="Drainage Infrastructure" />
+            </div>
+        </a>
+    </div>
+
+    <!-- Popups -->
+
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>High-Rise Construction Excellence
+            </h2>
+            <p>Drichest Engineering Company sets
+                the standard for innovative, safe,
+                and resilient high-rise buildings.
+                Our engineering experts deliver
+                top-tier vertical structures
+                trusted by clients across
+                industries.</p>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Solid Bridge Frameworks</h2>
+            <p>From design to execution, our
+                bridge projects combine structural
+                strength with aesthetic appeal.
+                Drichest Engineering ensures
+                durability and trust on every
+                crossing.</p>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Electrical Systems You Can Rely On
+            </h2>
+            <p>We power your success with modern,
+                efficient, and safe electrical
+                installations. Drichest
+                Engineering is your dependable
+                partner in electrifying your
+                spaces with precision.</p>
+        </div>
+    </div>
+
+    <div id="popup4" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Efficient HVAC Installations</h2>
+            <p>Comfort and energy efficiency meet
+                with our HVAC services. Drichest
+                Engineering brings expert airflow
+                solutions to life with unmatched
+                reliability.</p>
+        </div>
+    </div>
+
+    <div id="popup5" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Highway & Road Construction</h2>
+            <p>We pave the path to progress with
+                durable, high-quality road
+                networks. Trust Drichest
+                Engineering for smart
+                transportation solutions built to
+                last.</p>
+        </div>
+    </div>
+
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Smart Drainage Systems</h2>
+            <p>Protecting infrastructure starts
+                underground. Our expertly
+                engineered drainage solutions
+                manage water efficiently—ensuring
+                safety, sustainability, and peace
+                of mind.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
